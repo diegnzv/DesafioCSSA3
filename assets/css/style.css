@@ -86,6 +86,7 @@ footer {
 
 
 .filtro {
+    background-color: #dcdcdc;
     display: flex;
     align-items: center;
     flex-direction: column;
