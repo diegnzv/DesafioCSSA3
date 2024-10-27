@@ -131,17 +131,23 @@ footer {
     font-weight: bold;
 }
 
+
+
 .pagination {
     display: flex;
     justify-content: center;
     gap: 10px;
     padding: 10px;
+    
 }
 
 .pagination span {
     padding: 5px 10px;
     color: #004080;
     cursor: pointer;
+    outline: 1px solid;
+
+
 }
 
 .pagination .active {
