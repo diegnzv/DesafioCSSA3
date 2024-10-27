@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+main{
+    overflow-y: auto;
+}
+nav {
+    grid-area: nav;
+    background-color: #024f9c;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    background-color: #004080;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+footer {
+    grid-area: footer;
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.grilla-principal {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'nav'
+        'main'
+        'footer';
+    grid-template-rows: auto 1fr auto;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-items {
+    display: none;
+    list-style: none;
+}
+
+.menu-items li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 15px;
+    display:flex;
+    justify-content: center;
+    gap:15px;
+}
+
+.hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.filtro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.fselector {
+    width: 80%;
+    padding: 5px;
+}
+
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+
+.card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.size {
+    width: 250px;
+    height: auto;
+}
+
+.card-text {
+    margin-top: 10px;
+}
+
+.card-text p {
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.pagination span {
+    padding: 5px 10px;
+    color: #004080;
+    cursor: pointer;
+}
+
+.pagination .active {
+    font-weight: bold;
+    color: white;
+    background-color: #004080;
+    border-radius: 50%;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.social-icons span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 576px) {
+    .grilla-principal {
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: 
+            'nav main'
+            'footer main';
+        grid-template-rows: 90vh 10vh;
+    }
+    .title {
+        align-self: center;
+        padding-bottom: 15px;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .menu-items {
+        display: block;
+        padding-top: 20px;
+    }
+    .card {
+        flex: 1 1 calc(25% - 15px);
+    }
+    nav {
+        height: 100vh;
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+
+    footer {
+        grid-area: footer; 
+    }
+
+    main {
+        grid-area: main; 
+        overflow-y: auto; 
+    }
+}
+
+
